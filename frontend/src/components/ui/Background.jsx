@@ -49,22 +49,42 @@ export default function Background() {
         )
       }), [])}
 
-      {/* Subtle decorative glowing orbs */}
+      {/* Subtle decorative glowing orbs - Mesh Gradient Effect */}
       <motion.div 
-        className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-brand-blue/5 blur-[120px]"
+        className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-blue-300/15 blur-[120px]"
         animate={{
+          x: [0, 50, 0],
+          y: [0, 30, 0],
           scale: [1, 1.2, 1],
-          opacity: [0.5, 0.8, 0.5]
         }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div 
-        className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-brand-orange/5 blur-[120px]"
+        className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-orange-200/15 blur-[120px]"
         animate={{
+          x: [0, -40, 0],
+          y: [0, -50, 0],
           scale: [1, 1.3, 1],
-          opacity: [0.5, 0.7, 0.5]
         }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      />
+      <motion.div 
+        className="absolute top-[20%] right-[-5%] w-[50%] h-[50%] rounded-full bg-indigo-300/10 blur-[100px]"
+        animate={{
+          x: [0, -30, 0],
+          y: [0, 40, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 5 }}
+      />
+      <motion.div 
+        className="absolute bottom-[20%] left-[10%] w-[55%] h-[55%] rounded-full bg-blue-400/10 blur-[110px]"
+        animate={{
+          x: [0, 40, 0],
+          y: [0, -30, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut", delay: 8 }}
       />
     </div>
   )

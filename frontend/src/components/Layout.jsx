@@ -10,7 +10,7 @@ export default function Layout() {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "917709663121"
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
+    <div className="min-h-screen flex flex-col font-sans">
       <Background />
       <Navbar />
       <main className="flex-grow">
