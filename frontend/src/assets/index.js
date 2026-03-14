@@ -1,0 +1,6 @@
+export { default as MedalsImg } from './Medals.jpeg'
+export { default as OmkarAndhereImg } from './Omkar Andhere.jpeg'
+export { default as OmkarFIDEImg } from './Omkar FIDE Certificate.jpeg'
+export { default as TrophiesImg } from './Trophies.jpeg'
+export { default as heroImg } from './hero.png'
+export { default as FuelBrainLogo } from './FuelBrainLogo.png'
