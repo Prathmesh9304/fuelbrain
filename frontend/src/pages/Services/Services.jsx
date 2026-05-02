@@ -1,19 +1,22 @@
-import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
-import { CheckCircle2, ArrowRight } from "lucide-react"
-import { Button } from "../../components"
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5, staggerChildren: 0.1 } },
-  exit: { opacity: 0, y: -20, transition: { duration: 0.3 } }
-}
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, staggerChildren: 0.1 },
+  },
+  exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
+};
 
 const itemVariants = {
   initial: { opacity: 0, scale: 0.95 },
-  animate: { opacity: 1, scale: 1 }
-}
+  animate: { opacity: 1, scale: 1 },
+};
 
 export default function Services() {
   const courses = [
@@ -21,57 +24,60 @@ export default function Services() {
       title: "Chess Mastery",
       level: "Beginner to Advanced",
       color: "blue",
-      btnVariant: "default",
       features: [
         "Opening principles & traps",
         "Middle game strategy & planning",
         "Endgame techniques",
         "Live tournament analysis",
-        "Tactical vision training"
-      ]
+        "Tactical vision training",
+      ],
     },
     {
       title: "Coding Fundamentals",
       level: "Ages 8-16",
       color: "orange",
-      btnVariant: "default",
       features: [
         "Block-based sequencing basics",
         "Introduction to Python & JavaScript",
         "Game development projects",
         "Logic and algorithmic thinking",
-        "Web design fundamentals"
-      ]
+        "Web design fundamentals",
+      ],
     },
     {
       title: "Vedic & Abacus Maths",
       level: "All Levels",
-      color: "yellow",
-      btnVariant: "secondary",
+      color: "navy",
       features: [
         "Mental calculation speed-up",
         "10 Levels of ICMAS Abacus",
         "Vedic Mathematics tricks",
         "Concentration enhancement",
-        "Elimination of math anxiety"
-      ]
-    }
-  ]
+        "Elimination of math anxiety",
+      ],
+    },
+  ];
 
   const colorStyles = {
     blue: {
-      header: "bg-brand-blue text-white",
-      subtitle: "text-blue-100"
+      header: "bg-[#5AA2E6] text-white",
+      subtitle: "text-blue-50",
+      button:
+        "bg-[#5AA2E6] hover:bg-[#488AC7] text-white rounded-full font-bold shadow-[0_10px_20px_rgba(90,162,230,0.25)]",
     },
     orange: {
-      header: "bg-brand-orange text-white",
-      subtitle: "text-orange-100"
+      header: "bg-[#F5A623] text-white",
+      subtitle: "text-orange-50",
+      button:
+        "bg-[#F5A623] hover:bg-[#E0941E] text-white rounded-full font-bold shadow-[0_10px_20px_rgba(245,166,35,0.25)]",
     },
-    yellow: {
-      header: "bg-brand-yellow text-slate-900",
-      subtitle: "text-slate-800"
-    }
-  }
+    navy: {
+      header: "bg-[#111827] text-white",
+      subtitle: "text-slate-300",
+      button:
+        "bg-[#111827] hover:bg-slate-800 text-white rounded-full font-bold shadow-[0_10px_20px_rgba(17,24,39,0.25)]",
+    },
+  };
 
   return (
     <motion.div
@@ -79,67 +85,101 @@ export default function Services() {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+      className="w-full bg-white font-sans text-slate-800"
     >
-      <div className="text-center mb-16">
-        <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-6">Our Services</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-          Comprehensive curriculum designed to challenge, engage, and elevate your child's cognitive abilities.
+      {/* Header Section */}
+      <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-16 md:pb-20 text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-[54px] font-black tracking-tight text-[#111827] mb-4">
+          Our Services
+        </h1>
+        <p className="text-base md:text-[17px] font-medium text-[#4B5563] max-w-3xl mx-auto">
+          Comprehensive curriculum designed to challenge, engage, and elevate
+          your child's cognitive abilities.
         </p>
-      </div>
+      </section>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        {courses.map((course, i) => {
-          const style = colorStyles[course.color];
-          
-          return (
-            <motion.div key={i} variants={itemVariants} className="flex h-full">
-              <div className="flex flex-col w-full bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300">
-                {/* Header */}
-                <div className={`p-6 md:p-8 ${style.header}`}>
-                  <span className={`text-sm font-semibold uppercase tracking-wider mb-2 block ${style.subtitle}`}>
-                    {course.level}
-                  </span>
-                  <h3 className="text-3xl font-bold">
-                    {course.title}
-                  </h3>
-                </div>
-                
-                {/* Content */}
-                <div className="flex-grow p-6 md:p-8 bg-white">
-                  <ul className="space-y-4 md:space-y-5">
-                    {course.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-4">
-                        <CheckCircle2 className="text-brand-blue shrink-0" size={22} strokeWidth={1.5} />
-                        <span className="text-slate-700 font-medium leading-tight pt-0.5">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                {/* Footer */}
-                <div className="p-6 md:p-8 pt-0 bg-white mt-auto flex items-center justify-start">
-                  <Button variant={course.btnVariant} asChild>
-                    <Link to="/contact">
-                      Enquire <ArrowRight className="ml-2 h-4 w-4" />
+      {/* Services Grid Section */}
+      <section className="w-full bg-[#F8F9FA] py-16 md:py-24 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+          {courses.map((course, i) => {
+            const style = colorStyles[course.color];
+
+            return (
+              <motion.div
+                key={i}
+                variants={itemVariants}
+                className="flex h-full"
+              >
+                <div className="flex flex-col w-full bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                  {/* Header */}
+                  <div className={`p-8 ${style.header}`}>
+                    <span
+                      className={`text-sm font-semibold uppercase tracking-wider mb-2 block ${style.subtitle}`}
+                    >
+                      {course.level}
+                    </span>
+                    <h3 className="text-3xl font-bold">{course.title}</h3>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-grow p-8 bg-white">
+                    <ul className="space-y-5">
+                      {course.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-4">
+                          <CheckCircle2
+                            className="text-[#1A73E8] shrink-0"
+                            size={22}
+                            strokeWidth={2}
+                          />
+                          <span className="text-[#1C1C1E] font-medium leading-tight pt-0.5">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="p-8 pt-0 bg-white mt-auto">
+                    <Link
+                      to="/contact"
+                      className={`flex w-full justify-center items-center py-4 rounded-xl font-bold transition-colors ${style.button}`}
+                    >
+                      Enquire Now <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
-                  </Button>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-      
-      <motion.div variants={itemVariants} className="mt-20 text-center bg-slate-100 rounded-3xl p-12 shadow-sm">
-        <h2 className="text-3xl font-bold mb-4">Not sure which program to pick?</h2>
-        <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-          Book a free 1-on-1 demo session with our instructors to evaluate your child's needs.
-        </p>
-        <Button size="lg" variant="primary" asChild>
-          <Link to="/contact">Book Free Demo</Link>
-        </Button>
-      </motion.div>
+              </motion.div>
+            );
+          })}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="w-full bg-white py-16 md:py-24 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={itemVariants}
+            className="text-center bg-[#F8F9FA] rounded-[3rem] p-12 md:p-16 shadow-sm border border-slate-100"
+          >
+            <h2 className="text-[32px] lg:text-[40px] font-black text-[#111827] mb-6">
+            Not sure which program to pick?
+          </h2>
+          <p className="text-[19px] text-[#4B5563] font-medium mb-8 max-w-2xl mx-auto">
+            Book a free 1-on-1 demo session with our instructors to evaluate
+            your child's needs.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center bg-[#F5A623] hover:bg-[#E0941E] text-white px-8 py-4 rounded-full text-lg font-bold shadow-[0_10px_20px_rgba(245,166,35,0.25)] transition-all"
+          >
+            Book Your Free Demo <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </motion.div>
-  )
+  );
 }
