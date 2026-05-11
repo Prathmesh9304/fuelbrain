@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { seoData } from "../../utils/seoData";
 import {
   Brain,
   Code,
@@ -44,6 +46,22 @@ export default function Home() {
       exit="exit"
       className="w-full bg-white/0 font-sans text-slate-800"
     >
+      <Helmet>
+        <title>{seoData.home.title}</title>
+        <meta name="description" content={seoData.home.description} />
+        <meta name="keywords" content={seoData.home.keywords} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={seoData.home.url} />
+        <meta property="og:title" content={seoData.home.title} />
+        <meta property="og:description" content={seoData.home.description} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={seoData.home.url} />
+        <meta property="twitter:title" content={seoData.home.title} />
+        <meta
+          property="twitter:description"
+          content={seoData.home.description}
+        />
+      </Helmet>
       {/* 1. Hero Section */}
       <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 pb-0 flex flex-col lg:flex-row items-stretch border-b border-transparent">
         <div className="grid lg:grid-cols-2 gap-12 items-stretch w-full">

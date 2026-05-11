@@ -4,6 +4,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import toast from "react-hot-toast";
 import { ChildWithBookFemale2 } from "../../assets";
 import { sendContactMessage } from "../../services/api";
+import { Helmet } from "react-helmet-async";
+import { seoData } from "../../utils/seoData";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -62,6 +64,22 @@ export default function Contact() {
       exit="exit"
       className="w-full bg-transparent font-sans text-slate-800 min-h-[calc(100vh-80px)]"
     >
+      <Helmet>
+        <title>{seoData.contact.title}</title>
+        <meta name="description" content={seoData.contact.description} />
+        <meta name="keywords" content={seoData.contact.keywords} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={seoData.contact.url} />
+        <meta property="og:title" content={seoData.contact.title} />
+        <meta property="og:description" content={seoData.contact.description} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={seoData.contact.url} />
+        <meta property="twitter:title" content={seoData.contact.title} />
+        <meta
+          property="twitter:description"
+          content={seoData.contact.description}
+        />
+      </Helmet>
       {/* Header Section */}
       <section className="w-full bg-white pt-8 md:pt-10 pb-8 md:pb-10 border-b border-slate-100">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

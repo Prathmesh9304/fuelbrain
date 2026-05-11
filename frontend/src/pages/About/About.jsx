@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { seoData } from "../../utils/seoData";
 import {
   Heart,
   Target,
@@ -45,6 +47,22 @@ export default function About() {
       exit="exit"
       className="w-full bg-white font-sans text-slate-800"
     >
+      <Helmet>
+        <title>{seoData.about.title}</title>
+        <meta name="description" content={seoData.about.description} />
+        <meta name="keywords" content={seoData.about.keywords} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={seoData.about.url} />
+        <meta property="og:title" content={seoData.about.title} />
+        <meta property="og:description" content={seoData.about.description} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={seoData.about.url} />
+        <meta property="twitter:title" content={seoData.about.title} />
+        <meta
+          property="twitter:description"
+          content={seoData.about.description}
+        />
+      </Helmet>
       {/* Header section */}
       <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-16 md:pb-20 text-center">
         <div className="text-center">

@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { seoData } from "../../utils/seoData";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -84,6 +86,25 @@ export default function Services() {
       exit="exit"
       className="w-full bg-white font-sans text-slate-800"
     >
+      <Helmet>
+        <title>{seoData.services.title}</title>
+        <meta name="description" content={seoData.services.description} />
+        <meta name="keywords" content={seoData.services.keywords} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={seoData.services.url} />
+        <meta property="og:title" content={seoData.services.title} />
+        <meta
+          property="og:description"
+          content={seoData.services.description}
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={seoData.services.url} />
+        <meta property="twitter:title" content={seoData.services.title} />
+        <meta
+          property="twitter:description"
+          content={seoData.services.description}
+        />
+      </Helmet>
       {/* Header Section */}
       <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-16 md:pb-20 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-[54px] font-black tracking-tight text-[#111827] mb-4">
