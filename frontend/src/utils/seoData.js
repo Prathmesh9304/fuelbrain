@@ -1,6 +1,6 @@
 export const seoData = {
   home: {
-    title: "Engaging Coding, Chess & Math Classes for Kids | FuelBrain",
+    title: "FuelBrain",
     description:
       "FuelBrain offers a vibrant online education platform for kids (8-16) specializing in Chess, Coding, and Mathematics to foster logical development.",
     keywords:
@@ -8,7 +8,7 @@ export const seoData = {
     url: "https://fuelbrain.in/",
   },
   services: {
-    title: "Our Services - Chess, Coding & Maths | FuelBrain",
+    title: "FuelBrain - Services",
     description:
       "Explore our comprehensive curriculum of Chess Mastery, Coding Fundamentals, and Vedic & Abacus Maths designed to challenge and elevate children's cognitive abilities.",
     keywords:
@@ -16,7 +16,7 @@ export const seoData = {
     url: "https://fuelbrain.in/services",
   },
   about: {
-    title: "About Us - Gamified Learning Platform | FuelBrain",
+    title: "FuelBrain - About Us",
     description:
       "Learn more about FuelBrain, our mission, vision, and the dedicated team shaping the future of education for children aged 8-16 through gamified, structured learning.",
     keywords:
@@ -24,7 +24,7 @@ export const seoData = {
     url: "https://fuelbrain.in/about",
   },
   contact: {
-    title: "Contact Us - Consult with Our Experts | FuelBrain",
+    title: "FuelBrain - Contact Us",
     description:
       "Get in touch with the FuelBrain team. Send us a quick message, book a free demo session, or consult with our experts for academic assistance.",
     keywords:
