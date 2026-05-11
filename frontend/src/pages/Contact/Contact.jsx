@@ -219,7 +219,7 @@ export default function Contact() {
                 <Phone size={28} />
               </div>
               <h4 className="font-bold text-[#1C1C1E] text-xl mb-2">Phone</h4>
-              <p className="text-[#6B7280]">+91 7709 663 121</p>
+              <p className="text-[#6B7280]">+91 77096 63121</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center">
               <div className="w-16 h-16 bg-[#E8F0FE] text-[#1A73E8] rounded-full flex items-center justify-center mb-4">
