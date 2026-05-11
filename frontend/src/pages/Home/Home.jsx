@@ -104,8 +104,6 @@ export default function Home() {
               { icon: Zap, label: "Make learning\nexciting" },
               { icon: BookOpen, label: "Nail your\nhomework" },
               { icon: Monitor, label: "Tech-enabled\nplatform" },
-              { icon: Brain, label: "Crack selective\nexams" },
-              { icon: Award, label: "Scholarship\nsuccess" },
               { icon: Code, label: "Future-ready tech\nskills" },
               { icon: Calculator, label: "Learning aids &\nassessments" },
             ].map((feature, i) => (

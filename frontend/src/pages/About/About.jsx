@@ -239,11 +239,14 @@ export default function About() {
                   Omkar Andhere
                 </h2>
                 <p className="text-lg text-[#6B7280] mb-8 leading-relaxed">
-                  Omkar is a passionate educator with years of experience in
-                  competitive chess and cognitive development. He has
-                  successfully guided hundreds of students to achieve their full
-                  potential, blending critical thinking with creative
-                  problem-solving.
+                  Omkar is an Arena Candidate Master and a former University
+                  National player with over eight years of competitive
+                  experience. As a 10-level ICMAS Abacus credential holder, he
+                  has spent the last four years mentoring students globally to
+                  sharpen their logical foundations. By blending high-level
+                  strategy with gamified learning, Omkar empowers young minds to
+                  master Chess, Coding, and Mathematics through disciplined
+                  critical thinking.
                 </p>
                 <div className="flex items-center gap-4 text-[#0D1B2A] font-bold bg-[#FFD700]/20 w-fit px-5 py-3 rounded-xl border border-[#FFD700]/30">
                   <Medal size={24} className="text-[#F4A623]" />
