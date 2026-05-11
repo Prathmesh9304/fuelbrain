@@ -64,10 +64,10 @@ export default function Footer() {
                 <Mail size={16} className="text-brand-blue" />
                 fuelbrain111@gmail.com
               </li>
-              {/* <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-brand-blue" />{" "}
-                123 Education Hub, Learning City, BK 400001
-              </li> */}
+                Mangaon, Maharashtra, 402103
+              </li>
             </ul>
           </div>
         </div>
